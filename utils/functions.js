@@ -32,7 +32,7 @@ async function setAccessToken(res, user) {
     sameSite: "Lax",
     secure: process.env.NODE_ENV === "development" ? false : true,
     domain:
-      process.env.NODE_ENV === "development" ? "localhost" : ".fronthooks.ir",
+      process.env.NODE_ENV === "development" ? "" : "",
   };
   res.cookie(
     "accessToken",
