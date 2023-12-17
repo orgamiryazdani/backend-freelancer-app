@@ -31,7 +31,7 @@ async function setAccessToken(res, user) {
     signed: true, // Indicates if the cookie should be signed
     sameSite: "Lax",
     secure: process.env.NODE_ENV === "development" ? false : false,
-    domain: "localhost"
+    domain: ""
   };
   res.cookie(
     "accessToken",
@@ -47,7 +47,7 @@ async function setRefreshToken(res, user) {
     signed: true, // Indicates if the cookie should be signed
     sameSite: "Lax",
     secure: process.env.NODE_ENV === "development" ? false : false,
-    domain: "localhost"
+    domain: ""
   };
   res.cookie(
     "refreshToken",
