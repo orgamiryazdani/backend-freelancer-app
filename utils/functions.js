@@ -28,7 +28,7 @@ async function setAccessToken(res, user) {
   const cookieOptions = {
     maxAge: 1000 * 60 * 60 * 24 * 1, // would expire after 1 days
     httpOnly: false, // The cookie only accessible by the web server
-    signed: true, // Indicates if the cookie should be signed
+    signed: false, // Indicates if the cookie should be signed
     sameSite: "None",
     secure: process.env.NODE_ENV === "development" ? false : false,
     domain: ""
@@ -44,7 +44,7 @@ async function setRefreshToken(res, user) {
   const cookieOptions = {
     maxAge: 1000 * 60 * 60 * 24 * 365, // would expire after 1 year
     httpOnly: false, // The cookie only accessible by the web server
-    signed: true, // Indicates if the cookie should be signed
+    signed: false, // Indicates if the cookie should be signed
     sameSite: "None",
     secure: process.env.NODE_ENV === "development" ? false : false,
     domain: ""
